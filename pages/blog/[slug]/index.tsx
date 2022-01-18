@@ -39,20 +39,22 @@ export const getStaticProps = ({ params }: GetStaticPropsContext): GetStaticProp
 function BlogDetails({ postDetails }: BlogDetailsProps) {
   return (
     <div className={styles.container}>
-      <Markdown
-        className={styles.blog}
-        options={{
-          wrapper: "article",
-          forceBlock: true,
-          overrides: {
-            code: {
-              component: CodeBlock,
+      <article className="prose lg:prose-xl">
+        <Markdown
+          className={styles.blog}
+          options={{
+            wrapper: "article",
+            forceBlock: true,
+            overrides: {
+              code: {
+                component: CodeBlock,
+              },
             },
-          },
-        }}
-      >
-        {postDetails.body}
-      </Markdown>
+          }}
+        >
+          {postDetails.body}
+        </Markdown>
+      </article>
     </div>
   );
 }
