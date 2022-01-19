@@ -26,7 +26,9 @@ export const getServerSideProps = async ({
   const postSlugs = getPostSlugs();
   const postPaths = postSlugs.map((slug) => `${BASE_URL}/blog/${slug.replace(".md", "")}`);
 
-  const allPaths = [...postPaths, ...otherPaths];
+  // const allPaths = [...postPaths, ...otherPaths];
+
+  const allPaths = ["https://mohammadfaisal.dev/blog/how-to-create-a-sitemap"];
 
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
     <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
