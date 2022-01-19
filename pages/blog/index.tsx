@@ -29,12 +29,12 @@ function BlogPage({ posts }: BlogPageProps) {
       <Head>
         <title>Blog | Mohammad Faisal</title>
       </Head>
-      <div className="flex flex-wrap">
-        {posts.map((blogItem: any) => (
+      <div className="flex flex-wrap p-10">
+        {posts.map((blogItem: TypeBlogDetails) => (
           <BlogPreview
             key={blogItem.slug}
             slug={blogItem.slug}
-            title={blogItem.title}
+            title={blogItem.data.title}
             imageUrl={imageUrl}
             date={blogItem.data.date}
           />
