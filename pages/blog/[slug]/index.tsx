@@ -4,6 +4,7 @@ import Markdown from "markdown-to-jsx";
 import CodeBlock from "../../../components/code-block";
 import { getPostBySlug, getPostSlugs } from "../../../lib/blog-api";
 import { TypeBlogDetails } from "../../../types/TypeBlogDetails";
+import BuyMeACoffeeWidget from "../../../components/widgets/BuyMeACoffeeWidget";
 
 export const getStaticPaths = (): GetStaticPathsResult => {
   const posts = getPostSlugs();
@@ -41,9 +42,9 @@ interface BlogDetailsProps {
 
 function BlogDetails({ title, date, content }: BlogDetailsProps) {
   return (
-    <div className="flex justify-center">
-      {/* <h1>{title}</h1> */}
-      <article className="prose lg:prose-xl">
+    <div className="flex justify-center flex-wrap">
+      <article className="my-10 prose lg:prose-xl">
+        <h1>{title}</h1>
         <Markdown
           className="w-500"
           options={{
@@ -59,6 +60,7 @@ function BlogDetails({ title, date, content }: BlogDetailsProps) {
           {content}
         </Markdown>
       </article>
+      <BuyMeACoffeeWidget />
     </div>
   );
 }
