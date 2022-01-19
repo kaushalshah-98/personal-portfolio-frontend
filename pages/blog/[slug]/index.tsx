@@ -1,16 +1,16 @@
 import { GetStaticPathsResult, GetStaticPropsContext, GetStaticPropsResult } from "next";
 import React from "react";
-import { getPosts } from "../../posts";
-import styles from "./BlogDetails.module.scss";
 import Markdown from "markdown-to-jsx";
 import CodeBlock from "../../../components/code-block";
+import { getPostBySlug, getPostSlugs } from "../../../lib/blog-api";
+import { TypeBlogDetails } from "../../../types/TypeBlogDetails";
 
 export const getStaticPaths = (): GetStaticPathsResult => {
-  const posts = getPosts();
-  const paths = posts.map((post: any) => {
+  const posts = getPostSlugs();
+  const paths = posts.map((postSlug: string) => {
     return {
       params: {
-        slug: post.slug,
+        slug: postSlug.replace(".md", ""),
       },
     };
   });
@@ -20,28 +20,32 @@ export const getStaticPaths = (): GetStaticPathsResult => {
   };
 };
 
-interface BlogDetailsProps {
-  postDetails: any;
-}
-
 export const getStaticProps = ({ params }: GetStaticPropsContext): GetStaticPropsResult<BlogDetailsProps> => {
-  const posts = getPosts();
-  const slug = params?.slug;
+  const slug = params?.slug ?? "";
+  const postDetails = getPostBySlug(slug.toString());
 
-  const postToFind = posts.filter((item: any) => item.slug === slug);
   return {
     props: {
-      postDetails: postToFind[0],
+      title: postDetails.data.title,
+      date: postDetails.data.date,
+      content: postDetails.content,
     },
   };
 };
 
-function BlogDetails({ postDetails }: BlogDetailsProps) {
+interface BlogDetailsProps {
+  title: string;
+  date: string;
+  content: string;
+}
+
+function BlogDetails({ title, date, content }: BlogDetailsProps) {
   return (
-    <div className={styles.container}>
+    <div className="flex justify-center">
+      {/* <h1>{title}</h1> */}
       <article className="prose lg:prose-xl">
         <Markdown
-          className={styles.blog}
+          className="w-500"
           options={{
             wrapper: "article",
             forceBlock: true,
@@ -52,7 +56,7 @@ function BlogDetails({ postDetails }: BlogDetailsProps) {
             },
           }}
         >
-          {postDetails.body}
+          {content}
         </Markdown>
       </article>
     </div>

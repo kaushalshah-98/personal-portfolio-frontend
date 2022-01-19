@@ -1,6 +1,6 @@
-import React from "react";
 import * as fs from "fs";
 import { GetServerSidePropsContext, GetServerSidePropsResult } from "next";
+import { getPostSlugs } from "../lib/blog-api";
 
 const Sitemap = () => {
   return null;
@@ -9,12 +9,13 @@ const Sitemap = () => {
 export const getServerSideProps = async ({
   res,
 }: GetServerSidePropsContext): Promise<GetServerSidePropsResult<Record<string, string>>> => {
-  const BASE_URL = "http://localhost:3000";
+  const BASE_URL =
+    process.env.NODE_ENV === "production" ? process.env.NEXT_PUBLIC_PRODUCTION_ROOT_URL : "http://localhost:3000";
 
   const otherPaths: string[] = fs
     .readdirSync("pages")
     .filter((staticPage) => {
-      return !["api", "blog", "posts", "index.tsx", "_app.tsx", "_document.tsx", "404.tsx", "sitemap.xml.tsx"].includes(
+      return !["api", "posts", "index.tsx", "_app.tsx", "_document.tsx", "404.tsx", "sitemap.xml.tsx"].includes(
         staticPage
       );
     })
@@ -22,15 +23,8 @@ export const getServerSideProps = async ({
       return `${BASE_URL}/${staticPagePath}`;
     });
 
-  const postPaths: string[] = fs
-    .readdirSync("pages/posts")
-    .filter((staticPage) => {
-      return !["index.ts"].includes(staticPage);
-    })
-    .map((staticPagePath) => {
-      const pathToReturn = `${BASE_URL}/${staticPagePath}`;
-      return pathToReturn.substring(0, pathToReturn.length - 3);
-    });
+  const postSlugs = getPostSlugs();
+  const postPaths = postSlugs.map((slug) => `${BASE_URL}/blog/${slug.replace(".md", "")}`);
 
   const allPaths = [...postPaths, ...otherPaths];
 

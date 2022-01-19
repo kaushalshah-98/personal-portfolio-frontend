@@ -1,19 +1,8 @@
 ---
-title: "First Post!"
+title: "How to Create Sitemap in NextJS"
+subTitle: "Let’s learn how to easily add static and dynamic sitemaps for our NextJS websites"
 description: "New Year's resolution achieved, I started my very own blog!"
 date: 1 January 2020
----
-
-I wish I'd done this ages ago.
-
-## <!-- ./posts/second_post.md -->
-
----
-
-title: "Second Post"
-description: "And I even followed through with a second post!"
-date: 8 January 2020
-
 ---
 
 Occaecat Lorem mollit cupidatat elit incididunt non consectetur eiusmod qui adipisicing duis sunt irure minim.
