@@ -28,7 +28,7 @@ I'm baby enamel pin swag gastropub bitters migas lomo, dreamcatcher chartreuse v
 
 > Street art air plant tbh
 
-```js
+```javascript
 const name = "faisal";
 
 function getMyName() {
@@ -41,6 +41,10 @@ Let's look at another component
 ```jsx
 function BlogDetails({ postDetails }: BlogDetailsProps) {
   console.log("post details ", postDetails);
+
+  const getAction = () => {
+    return "this is great";
+  };
 
   return (
     <div className={styles.container}>

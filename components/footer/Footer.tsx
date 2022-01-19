@@ -1,9 +1,12 @@
-import React from "react";
-import styles from "./Footer.module.scss";
+import CopyrightDeclaration from "./CopyrightDeclaration";
+import SocialLinks from "./SocialLinks";
 
 function Footer() {
   return (
-    <footer className={styles.container}>Copyright 2022 Mohammad Faisal</footer>
+    <footer className="py-5 flex flex-col justify-center">
+      <SocialLinks />
+      <CopyrightDeclaration />
+    </footer>
   );
 }
 

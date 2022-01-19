@@ -4,7 +4,7 @@ import Layout from "../components/layout/Layout";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <Layout pageTitle={"Blog Home"}>
+    <Layout pageTitle={"Blog | Mohammad Faisal"}>
       <Component {...pageProps} />
     </Layout>
   );
