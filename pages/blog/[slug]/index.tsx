@@ -50,17 +50,17 @@ function BlogDetails({ title, date, content }: BlogDetailsProps) {
           options={{
             wrapper: "article",
             forceBlock: true,
-            overrides: {
-              code: {
-                component: CodeBlock,
-              },
-            },
+            // overrides: {
+            //   code: {
+            //     component: CodeBlock,
+            //   },
+            // },
           }}
         >
           {content}
         </Markdown>
       </article>
-      <BuyMeACoffeeWidget />
+      {/* <BuyMeACoffeeWidget /> */}
     </div>
   );
 }
