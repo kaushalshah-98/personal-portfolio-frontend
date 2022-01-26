@@ -7,7 +7,7 @@ const Home: NextPage = () => {
   return (
     <div className="flex flex-col gap-5 justify-center items-center w-screen">
       <div className="rounded-full py-5">
-        <Image src="/static/profile_image.jpeg" alt="Profile Image" height="200" width="200" className="rounded-full" />
+        <Image src="/static/profile.png" alt="Profile Image" height="200" width="200" className="rounded-full" />
       </div>
       <article className="prose sm:prose-sm md:prose-lg xl:prose-xl 2xl:prose-2xl text-center">
         <h1> {`Hi, I'm Mohammad Faisal`}</h1>
