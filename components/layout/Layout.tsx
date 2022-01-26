@@ -17,9 +17,9 @@ function Layout({ children, pageTitle }: LayoutProps) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>{pageTitle}</title>
       </Head>
-      <div className="min-h-screen">
+      <div className="h-screen">
         <Header />
-        <main> {children} </main>
+        <main style={{ minHeight: "75vh" }}> {children} </main>
         <Footer />
       </div>
     </>

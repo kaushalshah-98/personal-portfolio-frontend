@@ -29,7 +29,7 @@ function BlogPage({ posts }: BlogPageProps) {
       <Head>
         <title>Blog | Mohammad Faisal</title>
       </Head>
-      <div className="flex flex-wrap p-10">
+      <div className="flex flex-wrap p-10 gap-10 justify-between">
         {posts.map((blogItem: TypeBlogDetails) => (
           <BlogPreview
             key={blogItem.slug}
@@ -39,6 +39,15 @@ function BlogPage({ posts }: BlogPageProps) {
             date={blogItem.data.date}
           />
         ))}
+        {/* {posts.map((blogItem: TypeBlogDetails) => (
+          <BlogPreview
+            key={blogItem.slug}
+            slug={blogItem.slug}
+            title={blogItem.data.title}
+            imageUrl={imageUrl}
+            date={blogItem.data.date}
+          />
+        ))} */}
       </div>
     </>
   );

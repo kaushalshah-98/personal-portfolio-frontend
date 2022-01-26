@@ -43,10 +43,10 @@ interface BlogDetailsProps {
 function BlogDetails({ title, date, content }: BlogDetailsProps) {
   return (
     <div className="flex justify-center flex-wrap">
-      <article className="my-10 prose lg:prose-xl">
+      <article className="my-10 prose sm:prose-sm md:prose-lg xl:prose-xl 2xl:prose-2xl">
         <h1>{title}</h1>
         <Markdown
-          className="w-500"
+          className="max-w-prose"
           options={{
             wrapper: "article",
             forceBlock: true,
