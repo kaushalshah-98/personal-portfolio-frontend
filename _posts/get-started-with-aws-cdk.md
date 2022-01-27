@@ -22,7 +22,7 @@ There are many options to choose from. Let’s explore them!
 
 AWS has several tools to support infrastructure as code. Among them, `**Cloudformation**` is the most powerful one but it’s very verbose.
 
-Another option is `**AWS SAM**` which is an extension of Cloudformation with reduced syntax. But unlike `**Cloudformation**` we have to use `JSON` or `YAML` syntax for this.
+Another option is **AWS SAM** which is an extension of Cloudformation with reduced syntax. But unlike **Cloudformation** we have to use **JSON** or **YAML** syntax for this.
 
 Then comes the AWS CDK
 
@@ -32,7 +32,7 @@ According to AWS documentation.
 
 > The AWS Cloud Development Kit (AWS CDK) is **an open source software development framework to define your cloud application resources using familiar programming languages**
 
-In simple terms, we can use our `typescript` or `python` code to define resources in the cloud.
+In simple terms, we can use our **typescript** or **python** code to define resources in the cloud.
 
 This is powerful for us developers because we don’t have to use some fancy YAML syntax to write infrastructure code anymore!
 

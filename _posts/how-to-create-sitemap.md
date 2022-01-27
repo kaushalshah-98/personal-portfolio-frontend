@@ -1,6 +1,6 @@
 ---
 title: "How to Create Sitemap in NextJS"
-description: "Let’s learn how to easily add static and dynamic sitemaps for our NextJS websites"
+description: "Let’s learn how to easily add static and dynamic sitemaps for our NextJS websites. And let's not forget to include all the good things about google analytics as well"
 date: 1 January 2020
 ---
 

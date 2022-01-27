@@ -13,17 +13,22 @@ function Header() {
       </Link>
       <div className="flex gap-4">
         <Link href="/blog" passHref>
-          <h3 className="cursor-pointer text-xl">Blog </h3>
+          <h3 className="cursor-pointer text-xl hover:underline hover:underline-offset-2 transition duration-150">
+            {"Blog"}
+          </h3>
         </Link>
-        <Link href="/contact" passHref>
+        {/* <Link href="/contact" passHref>
           <h3 className="cursor-pointer text-xl">Contact </h3>
         </Link>
         <Link href="/contact" passHref>
           <h3 className="cursor-pointer text-xl">Projects </h3>
         </Link>
         <Link href="/contact" passHref>
-          <h3 className="cursor-pointer text-xl">Hire Me </h3>
+          <h3 className="cursor-pointer text-xl">Resume </h3>
         </Link>
+        <Link href="/contact" passHref>
+          <h3 className="cursor-pointer text-xl">Hire Me </h3>
+        </Link> */}
       </div>
     </header>
   );
