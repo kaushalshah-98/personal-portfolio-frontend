@@ -15,7 +15,7 @@ const Home: NextPage = () => {
       </article>
 
       <Link href="/blog" passHref>
-        <button className="mt-32 flex items-center transition delay-50 border-black border-2 bg-white hover:bg-black text-black  hover:text-white py-5 rounded-lg px-20 w-auto self-center ">
+        <button className="mt-16 flex items-center transition delay-50 border-black border-2 bg-white hover:bg-black text-black  hover:text-white py-5 rounded-lg px-20 w-auto self-center ">
           <div className="px-3"> {`Visit my Blog`} </div>
           <FaArrowRight />
         </button>
