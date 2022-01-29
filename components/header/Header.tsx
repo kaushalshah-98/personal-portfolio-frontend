@@ -11,9 +11,9 @@ function Header() {
           <h2 className="cursor-pointer text-lg xl:text-3xl md:text-2xl font-bold py-0.5">Mohammad Faisal </h2>
         </div>
       </Link>
-      <div className="flex gap-4">
+      <div className="flex gap-4 items-center">
         <Link href="/blog" passHref>
-          <h3 className="cursor-pointer text-xl hover:underline hover:underline-offset-2 transition duration-150">
+          <h3 className="cursor-pointer text-md lg:text-xl hover:underline hover:underline-offset-2 transition duration-150">
             {"Blog"}
           </h3>
         </Link>

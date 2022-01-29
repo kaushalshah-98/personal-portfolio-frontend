@@ -9,10 +9,12 @@ interface BlogPreviewProps {
   imageUrl: string;
   date: string;
   slug: string;
+  tags: string[];
 }
 
 function BlogPreview(props: BlogPreviewProps) {
-  const { title, description, imageUrl, date, slug } = props;
+  const { title, description, imageUrl, tags, date, slug } = props;
+  console.log(imageUrl);
   return (
     <Link href={`/blog/${slug}`} passHref>
       <div className="flex max-w-md pb-8 bg-white overflow-hidden shadow-lg flex-col gap-2 rounded-lg hover:cursor-pointer  transition ease-in-out duration-200 hover:scale-105">
@@ -25,8 +27,9 @@ function BlogPreview(props: BlogPreviewProps) {
           className=" rounded-t-md"
         />
         <div className="flex flex-wrap justify-starts items-center mt-4 px-4 mb-2">
-          <ArticleTag title={"Aws"} />
-          <ArticleTag title={"SEO"} />
+          {tags.map((tag) => (
+            <ArticleTag title={tag} key={tag} />
+          ))}
         </div>
 
         <div className="text-gray-900 font-bold text-2xl px-4 py-2">{title}</div>

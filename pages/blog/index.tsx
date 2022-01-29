@@ -36,7 +36,8 @@ function BlogPage({ posts }: BlogPageProps) {
             slug={blogItem.slug}
             title={blogItem.data.title}
             description={blogItem.data.description}
-            imageUrl={imageUrl}
+            imageUrl={blogItem.data.banner}
+            tags={blogItem.data.tags}
             date={blogItem.data.date}
           />
         ))}

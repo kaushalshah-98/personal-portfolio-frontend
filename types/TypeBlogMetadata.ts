@@ -3,4 +3,6 @@ export interface TypeBlogMetaData {
   subTitle: string;
   description: string;
   date: string;
+  banner: string;
+  tags: string[];
 }
