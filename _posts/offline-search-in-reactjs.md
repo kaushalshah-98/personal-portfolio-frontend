@@ -88,7 +88,7 @@ It’s not convenient right?
 
 Let’s make it better.
 
-# Power of JSON
+## Power of JSON
 
 So we will take advantage of the `JSON.stringify()` and `JSON.parse()` method that is available to us.
 
@@ -110,7 +110,7 @@ useEffect(() => {
 
 You can transfer this logic to a nice neat hook for usability.
 
-# Further improvement
+## Further improvement
 
 Well, the solution we implemented will work if the users search with the proper capitalization.
 

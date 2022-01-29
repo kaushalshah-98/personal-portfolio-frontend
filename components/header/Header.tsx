@@ -7,7 +7,7 @@ function Header() {
     <header className="no-prose text-center flex justify-between p-5 lg:p-8 bg-gray-50">
       <Link href="/" passHref>
         <div className="flex gap-2 align-center text-center">
-          <Image src="/static/logo.png" alt="Profile Image" height="30" width="30" className="" />
+          <Image src="/static/logo.png" alt="Profile Image" height="40" width="40" className="" />
           <h2 className="cursor-pointer text-lg xl:text-3xl md:text-2xl font-bold py-0.5">Mohammad Faisal </h2>
         </div>
       </Link>
