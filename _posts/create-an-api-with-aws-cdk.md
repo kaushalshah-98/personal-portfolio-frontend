@@ -1,18 +1,16 @@
 ---
-title: "Get Started with AWS CDK"
-description: "Let’s learn how to create an aws cdk project"
-banner: "https://miro.medium.com/max/1400/1*i-84RINOvVFkD9txsVDjDQ.jpeg"
+title: "Create Simple API With AWS CDK"
+description: "How to use aws cdk to create API for your application"
+banner: "/images/posts/create-an-api-with-aws-cdk/banner.jpeg"
 tags: ["AWS"]
-date: 1 January 2020
+date: 3 January 2022
 ---
 
-## Why it’s the most developer-friendly way to write serverless applications
+# Create Simple API With AWS CDK
 
-<!-- ![Mohammad Faisal](https://miro.medium.com/fit/c/96/96/1*-AnRurxYM1u0PRMIR60Oyg.jpeg)](https://56faisal.medium.com/?source=post_page-----ba2f0501cfdc-----------------------------------)[Mohammad Faisal](https://56faisal.medium.com/?source=post_page-----ba2f0501cfdc-----------------------------------)Follow
+### How to use aws cdk to create API for your application
 
-[Jan 12](https://medium.com/geekculture/create-your-first-aws-cdk-app-to-understand-its-power-ba2f0501cfdc?source=post_page-----ba2f0501cfdc-----------------------------------) · 3 min read -->
-
-![](https://miro.medium.com/max/1400/1*i-84RINOvVFkD9txsVDjDQ.jpeg) Photo by [cottonbro](https://www.pexels.com/@cottonbro?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels) from [Pexels](https://www.pexels.com/photo/man-reclining-and-looking-at-his-laptop-5483064/?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels)
+![](/images/posts/create-an-api-with-aws-cdk/banner.jpeg) from [Pexels](https://www.pexels.com/photo/man-reclining-and-looking-at-his-laptop-5483064/?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels)
 
 In this age of cloud development and serverless architecture, the ability to write infrastructure as code is really powerful.
 
@@ -20,9 +18,9 @@ There are many options to choose from. Let’s explore them!
 
 ## Options to consider
 
-AWS has several tools to support infrastructure as code. Among them, `**Cloudformation**` is the most powerful one but it’s very verbose.
+AWS has several tools to support infrastructure as code. Among them, `Cloudformation` is the most powerful one but it’s very verbose.
 
-Another option is **AWS SAM** which is an extension of Cloudformation with reduced syntax. But unlike **Cloudformation** we have to use **JSON** or **YAML** syntax for this.
+Another option is `AWS SAM` which is an extension of Cloudformation with reduced syntax. But unlike `Cloudformation` we have to use `JSON` or `YAML` syntax for this.
 
 Then comes the AWS CDK
 
@@ -32,7 +30,7 @@ According to AWS documentation.
 
 > The AWS Cloud Development Kit (AWS CDK) is **an open source software development framework to define your cloud application resources using familiar programming languages**
 
-In simple terms, we can use our **typescript** or **python** code to define resources in the cloud.
+In simple terms, we can use our `typescript` or `python` code to define resources in the cloud.
 
 This is powerful for us developers because we don’t have to use some fancy YAML syntax to write infrastructure code anymore!
 
@@ -48,15 +46,17 @@ Let’s begin.
 
 Go to your terminal and run the following commands
 
-```sh
-mkdir learn-aws-cdkcd learn-aws-cdkcdk init app --language typescript
+```
+mkdir learn-aws-cdk
+cd learn-aws-cdk
+cdk init app --language typescript
 ```
 
 ## Then install required dependencies
 
 We will need `lambda` and `apigateway` to build our application. To install the required dependencies
 
-```sh
+```
 npm i @aws-cdk/aws-lambda @aws-cdk/aws-apigateway
 ```
 
@@ -69,9 +69,9 @@ The benefit of using this library is
 
 Let’s add that
 
-<!-- ```sh
+```
 npm i @aws-cdk/aws-lambda-nodejs
-``` -->
+```
 
 Now we are ready to write some functions
 
@@ -153,7 +153,7 @@ export class WinterWonderlandBackendStack extends cdk.Stack {
 
 Notice at the end of the file we have added the cors configuration to be
 
-```javascript
+```sh
 allowOrigins: apigateway.Cors._ALL_ORIGINS,
 ```
 
@@ -165,7 +165,7 @@ Now comes the fun part. First, we need to compile our lambda code which will be 
 
 Then, we need to generate the cloud formation template for our project. To do all this we just need to run the following command
 
-```sh
+```
 cdk synth
 ```
 
@@ -173,13 +173,13 @@ This will give you a `.yaml` file as an output on the terminal.
 
 Now if you want to deploy it run the next command. to prepare the environment. First, open the `bin/learn-aws-cdk.ts` file and uncomment the file that says
 
-```javascript
-env: { account: "YOUR_ACCOUNTs_ID", region: "us-east-1" },
+```sh
+env: { account: "YOUR_ACCOUNT_ID", region: "us-east-1" },
 ```
 
 Where do you get your account id? Log in to your aws console and click on the top menu over your name.
 
-You will see the account ID there.
+![](/images/posts/create-an-api-with-aws-cdk/1.png)
 
 Now we need to prepare the application as well. To do that run the following command
 
@@ -189,7 +189,7 @@ cdk bootstrap cdk bootstrap aws://YOUR_ACCOUNT_ID/us-east-1
 
 If that is successful now you can run the deploy command to deploy the application to the cloud.
 
-```sh
+```
 cdk deploy
 ```
 
@@ -198,5 +198,3 @@ And you will be greeted with an URL that you can use to call the lambda API.
 That’s it for today. Hope you learned something new!
 
 Have a great day! :D
-
-[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/T6T282CAG)

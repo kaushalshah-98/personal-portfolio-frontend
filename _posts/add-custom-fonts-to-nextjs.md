@@ -1,7 +1,7 @@
 ---
 title: "Add Custom Fonts with NextJS"
 description: "Create beautiful looking websites in minutes"
-banner: "https://images.pexels.com/photos/5045981/pexels-photo-5045981.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+banner: "/images/posts/add-custom-fonts-to-nextjs/banner.jpeg"
 tags: ["NextJS"]
 date: 1 January 2022
 ---
@@ -10,7 +10,7 @@ date: 1 January 2022
 
 ### Create beautiful looking websites with custom fonts
 
-![](https://images.pexels.com/photos/5045981/pexels-photo-5045981.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500)
+![](/images/posts/add-custom-fonts-to-nextjs/banner.jpeg)
 
 _Photo by [Brett Jordan](https://www.pexels.com/@brettjordan) from [Pexels](https://www.pexels.com/photo/black-and-white-printer-paper-5045981/)_
 
@@ -29,13 +29,13 @@ yarn create next-app nextjs-font-demo
 This will create a new project. Go inside it and run it
 
 ```
-cd nextjs-font-demoyarn dev
+cd nextjs-font-demo
+yarn dev
 ```
 
 Head over to your browser and you will see it running [locally](http://localhost:3000). Change the text inside `index.js` with only some text.
 
-![](https://miro.medium.com/max/1400/1*gpRySGw3wnGrMVtrntGtjA.png)
-_First text_
+![](/images/posts/add-custom-fonts-to-nextjs/initial-text.png)
 
 Let’s customize the look of this text
 
@@ -45,7 +45,7 @@ The best place to find fonts of your choice is [https://fonts.google.com/](https
 
 Pick any one of them and get the link to download it. We are going with **Nunito** for this tutorial. You will find the link on the right panel
 
-![](https://miro.medium.com/max/1400/1*-SVOug8rZtFhqFRCwbmjyw.png)
+![](/images/posts/add-custom-fonts-to-nextjs/google-fonts-website.png)
 
 You can add or remove various weights for this particular font. Get the link from the right panel.
 
@@ -117,8 +117,7 @@ This will do the same thing as before.
 
 Now after adding the font and applying it to the body of the `global.css` file our final result will look something like this
 
-![](https://miro.medium.com/max/1400/1*XHTq72-eSePJngQyJ0DsdQ.png)
-_Final text_
+![](/images/posts/add-custom-fonts-to-nextjs/final-text.png)
 
 So our font is successfully applied to the project.
 
