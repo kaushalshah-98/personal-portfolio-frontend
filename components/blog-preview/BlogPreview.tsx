@@ -24,7 +24,7 @@ function BlogPreview(props: BlogPreviewProps) {
           height={200}
           src={imageUrl}
           alt="This is the preview image of the blog"
-          className=" rounded-t-md"
+          className="rounded-t-md"
         />
         <div className="flex flex-wrap justify-starts items-center mt-4 px-4 mb-2">
           {tags.map((tag) => (
