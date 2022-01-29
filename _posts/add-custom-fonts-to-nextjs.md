@@ -34,9 +34,8 @@ cd nextjs-font-demoyarn dev
 
 Head over to your browser and you will see it running [locally](http://localhost:3000). Change the text inside `index.js` with only some text.
 
-<img alt="" class="t u v lf aj" src="https://miro.medium.com/max/1400/1\*gpRySGw3wnGrMVtrntGtjA.png" width="700" height="104" srcSet="https://miro.medium.com/max/552/1\*gpRySGw3wnGrMVtrntGtjA.png 276w, https://miro.medium.com/max/1104/1\*gpRySGw3wnGrMVtrntGtjA.png 552w, https://miro.medium.com/max/1280/1\*gpRySGw3wnGrMVtrntGtjA.png 640w, https://miro.medium.com/max/1400/1\*gpRySGw3wnGrMVtrntGtjA.png 700w" sizes="700px" role="presentation"/>
-
-First text
+![](https://miro.medium.com/max/1400/1*gpRySGw3wnGrMVtrntGtjA.png)
+_First text_
 
 Let’s customize the look of this text
 
@@ -46,7 +45,7 @@ The best place to find fonts of your choice is [https://fonts.google.com/](https
 
 Pick any one of them and get the link to download it. We are going with **Nunito** for this tutorial. You will find the link on the right panel
 
-<img alt="" class="t u v lf aj" src="https://miro.medium.com/max/1400/1\*-SVOug8rZtFhqFRCwbmjyw.png" width="700" height="355" srcSet="https://miro.medium.com/max/552/1\*-SVOug8rZtFhqFRCwbmjyw.png 276w, https://miro.medium.com/max/1104/1\*-SVOug8rZtFhqFRCwbmjyw.png 552w, https://miro.medium.com/max/1280/1\*-SVOug8rZtFhqFRCwbmjyw.png 640w, https://miro.medium.com/max/1400/1\*-SVOug8rZtFhqFRCwbmjyw.png 700w" sizes="700px" role="presentation"/>
+![](https://miro.medium.com/max/1400/1*-SVOug8rZtFhqFRCwbmjyw.png)
 
 You can add or remove various weights for this particular font. Get the link from the right panel.
 
@@ -106,7 +105,7 @@ You will find a file named `global.css` under the `styles` folder. The styles ap
 
 Now go there and add the following line
 
-```
+```sh
 @import url('[https://fonts.googleapis.com/css2?family=Lobster&display=swap](https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,600;0,700;0,900;1,400&display=swap)');
 ```
 
@@ -118,9 +117,8 @@ This will do the same thing as before.
 
 Now after adding the font and applying it to the body of the `global.css` file our final result will look something like this
 
-<img alt="" class="t u v lf aj" src="https://miro.medium.com/max/1400/1\*XHTq72-eSePJngQyJ0DsdQ.png" width="700" height="92" srcSet="https://miro.medium.com/max/552/1\*XHTq72-eSePJngQyJ0DsdQ.png 276w, https://miro.medium.com/max/1104/1\*XHTq72-eSePJngQyJ0DsdQ.png 552w, https://miro.medium.com/max/1280/1\*XHTq72-eSePJngQyJ0DsdQ.png 640w, https://miro.medium.com/max/1400/1\*XHTq72-eSePJngQyJ0DsdQ.png 700w" sizes="700px" role="presentation"/>
-
-Final text
+![](https://miro.medium.com/max/1400/1*XHTq72-eSePJngQyJ0DsdQ.png)
+_Final text_
 
 So our font is successfully applied to the project.
 
