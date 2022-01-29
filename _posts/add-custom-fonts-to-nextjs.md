@@ -1,7 +1,7 @@
 ---
 title: "Add Custom Fonts with NextJS"
 description: "Create beautiful looking websites in minutes"
-banner: "https://miro.medium.com/max/1400/1*i-84RINOvVFkD9txsVDjDQ.jpeg"
+banner: "https://images.pexels.com/photos/5045981/pexels-photo-5045981.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
 tags: ["NextJS"]
 date: 1 January 2022
 ---
