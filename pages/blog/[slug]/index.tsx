@@ -42,19 +42,19 @@ interface BlogDetailsProps {
 
 function BlogDetails({ title, date, content }: BlogDetailsProps) {
   return (
-    <div className="flex justify-center flex-wrap max-w-screen">
-      <article className="whitespace-pre-line break-normal my-10 prose prose-sm sm:prose-base md:prose-lg xl:prose-xl 2xl:prose-2xl">
+    <div className="flex justify-center">
+      <article className="sm:break-normal my-10">
         <h1>{title}</h1>
         <Markdown
-          className="max-w-screen max-w-readable"
+          className="prose prose-indigo  prose-sm sm:prose-base md:prose-lg xl:prose-xl 2xl:prose-2xl"
           options={{
             wrapper: "article",
             forceBlock: true,
-            // overrides: {
-            //   code: {
-            //     component: CodeBlock,
-            //   },
-            // },
+            overrides: {
+              code: {
+                component: CodeBlock,
+              },
+            },
           }}
         >
           {content}

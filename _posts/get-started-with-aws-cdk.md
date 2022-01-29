@@ -69,9 +69,9 @@ The benefit of using this library is
 
 Let’s add that
 
-```sh
+<!-- ```sh
 npm i @aws-cdk/aws-lambda-nodejs
-```
+``` -->
 
 Now we are ready to write some functions
 

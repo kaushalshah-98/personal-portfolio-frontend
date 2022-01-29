@@ -16,16 +16,40 @@ I'm baby enamel pin swag gastropub bitters migas lomo, dreamcatcher chartreuse v
 
 > Street art air plant tbh
 
-```javascript
+<!-- ```javascript
 const name = "faisal";
 
 function getMyName() {
   return "nothing";
 }
+``` -->
+
+```javascript
+exports.handler = async function (event: any, context: any) {
+  console.log("request ", JSON.stringify(event));
+
+  const responseText = "Hello from lambda";
+
+  return {
+    headers: {
+      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Credentials": true,
+      "Access-Control-Allow-Methods": "*",
+      "Access-Control-Allow-Headers": `Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type
+        Access-Control-Request-Method, Access-Control-Request-Headers, Authorization`,
+    },
+
+    isBase64Encoded: false,
+    multiValueHeaders: {},
+    statusCode: 200,
+    body: JSON.stringify(responseText),
+  };
+};
 ```
 
 Let's look at another component
 
+<!--
 ```jsx
 function BlogDetails({ postDetails }: BlogDetailsProps) {
   console.log("post details ", postDetails);
@@ -57,4 +81,4 @@ function BlogDetails({ postDetails }: BlogDetailsProps) {
 
 ```sh
 cd my-directory
-```
+``` -->

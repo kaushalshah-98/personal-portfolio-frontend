@@ -20,7 +20,7 @@ const CodeBlock = ({ className = "lang-javascript", children }: CodeBlockProps) 
   const [isCopied, setIsCopied] = useState(false);
 
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col no-prose">
       <CopyToClipboard text={children} onCopy={() => setIsCopied(true)}>
         <button className="flex self-center">
           {isCopied ? <FaRegClipboard className="mx-2 self-center" /> : <FaRegCopy className="mx-2 self-center" />}{" "}
