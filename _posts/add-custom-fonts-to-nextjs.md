@@ -6,15 +6,9 @@ tags: ["NextJS"]
 date: 1 January 2022
 ---
 
-# How to Add Google Fonts to Your Next.js Website
+# How to Add Custom Google Fonts to Your Next.js Website
 
 ### Create beautiful looking websites with custom fonts
-
-[
-
-![Mohammad Faisal](https://miro.medium.com/fit/c/96/96/1*-AnRurxYM1u0PRMIR60Oyg.jpeg)](https://56faisal.medium.com/?source=post_page-----e62272a0ff57-----------------------------------)[Mohammad Faisal](https://56faisal.medium.com/?source=post_page-----e62272a0ff57-----------------------------------)[Follow](https://medium.com/m/signin?actionUrl=https%3A%2F%2Fmedium.com%2F_%2Fsubscribe%2Fuser%2Ffe04a352a811%2Fe62272a0ff57&operation=register&redirect=https%3A%2F%2Fenlear.academy%2Fhow-to-add-google-fonts-to-your-next-js-website-e62272a0ff57&user=Mohammad+Faisal&userId=fe04a352a811&source=post_page-fe04a352a811----e62272a0ff57---------------------follow_byline--------------)
-
-[Jan 17](https://medium.com/how-to-add-google-fonts-to-your-next-js-website-e62272a0ff57?source=post_page-----e62272a0ff57-----------------------------------) · 3 min read
 
 ![](https://images.pexels.com/photos/5045981/pexels-photo-5045981.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500)
 
@@ -62,7 +56,37 @@ The first way to do this is by a custom `_document.js` file. The [Document](http
 
 Create a new page under `/pages` directory named `_document.js` file and add the following code there.
 
-CustomDocument.js
+```javascript
+import Document, { Html, Head, Main, NextScript } from "next/document";
+
+class MyDocument extends Document {
+  static async getInitialProps(ctx) {
+    const initialProps = await Document.getInitialProps(ctx);
+    return { ...initialProps };
+  }
+
+  render() {
+    return (
+      <Html>
+        <Head>
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,600;0,700;0,900;1,400&display=swap"
+            rel="stylesheet"
+          />
+        </Head>
+        <body>
+          <Main />
+          <NextScript />
+        </body>
+      </Html>
+    );
+  }
+}
+
+export default MyDocument;
+```
 
 There are some customizations that you need to do for the `link` tags here. For example notice we have closed the `link` tags with `/>` instead of `>`
 
