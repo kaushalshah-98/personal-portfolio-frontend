@@ -19,9 +19,8 @@ function Layout({ children, pageTitle }: LayoutProps) {
       </Head>
       <div className="h-screen">
         <Header />
-        <main style={{ minHeight: "80vh" }} className="">
-          {" "}
-          {children}{" "}
+        <main style={{ minHeight: "75vh" }} className="">
+          {children}
         </main>
         <Footer />
       </div>

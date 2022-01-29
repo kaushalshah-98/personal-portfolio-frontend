@@ -29,7 +29,7 @@ function BlogPage({ posts }: BlogPageProps) {
       <Head>
         <title>Blog | Mohammad Faisal</title>
       </Head>
-      <div className="flex flex-wrap p-10 gap-10 justify-evenly bg-gray-50">
+      <div className="flex flex-wrap p-5 gap-5  justify-evenly bg-gray-50">
         {posts.map((blogItem: TypeBlogDetails) => (
           <BlogPreview
             key={blogItem.slug}

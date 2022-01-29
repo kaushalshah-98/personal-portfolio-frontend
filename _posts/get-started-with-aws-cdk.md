@@ -1,18 +1,18 @@
 ---
 title: "Get Started with AWS CDK"
 description: "Let’s learn how to create an aws cdk project"
+banner:
+tags: []
 date: 1 January 2020
 ---
 
 ## Why it’s the most developer-friendly way to write serverless applications
 
-[
+<!-- ![Mohammad Faisal](https://miro.medium.com/fit/c/96/96/1*-AnRurxYM1u0PRMIR60Oyg.jpeg)](https://56faisal.medium.com/?source=post_page-----ba2f0501cfdc-----------------------------------)[Mohammad Faisal](https://56faisal.medium.com/?source=post_page-----ba2f0501cfdc-----------------------------------)Follow
 
-![Mohammad Faisal](https://miro.medium.com/fit/c/96/96/1*-AnRurxYM1u0PRMIR60Oyg.jpeg)](https://56faisal.medium.com/?source=post_page-----ba2f0501cfdc-----------------------------------)[Mohammad Faisal](https://56faisal.medium.com/?source=post_page-----ba2f0501cfdc-----------------------------------)Follow
+[Jan 12](https://medium.com/geekculture/create-your-first-aws-cdk-app-to-understand-its-power-ba2f0501cfdc?source=post_page-----ba2f0501cfdc-----------------------------------) · 3 min read -->
 
-[Jan 12](https://medium.com/geekculture/create-your-first-aws-cdk-app-to-understand-its-power-ba2f0501cfdc?source=post_page-----ba2f0501cfdc-----------------------------------) · 3 min read
-
-![](https://miro.medium.com/max/1400/1*i-84RINOvVFkD9txsVDjDQ.jpeg)Photo by [cottonbro](https://www.pexels.com/@cottonbro?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels) from [Pexels](https://www.pexels.com/photo/man-reclining-and-looking-at-his-laptop-5483064/?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels)
+<!-- ![](https://miro.medium.com/max/1400/1*i-84RINOvVFkD9txsVDjDQ.jpeg)Photo by [cottonbro](https://www.pexels.com/@cottonbro?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels) from [Pexels](https://www.pexels.com/photo/man-reclining-and-looking-at-his-laptop-5483064/?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels) -->
 
 In this age of cloud development and serverless architecture, the ability to write infrastructure as code is really powerful.
 

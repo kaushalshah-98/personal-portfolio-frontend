@@ -42,11 +42,11 @@ interface BlogDetailsProps {
 
 function BlogDetails({ title, date, content }: BlogDetailsProps) {
   return (
-    <div className="flex justify-center flex-wrap">
-      <article className="my-10 prose sm:prose-sm md:prose-lg xl:prose-xl 2xl:prose-2xl">
+    <div className="flex justify-center flex-wrap max-w-screen">
+      <article className="whitespace-pre-line break-normal my-10 prose prose-sm sm:prose-base md:prose-lg xl:prose-xl 2xl:prose-2xl">
         <h1>{title}</h1>
         <Markdown
-          className="max-w-prose"
+          className="max-w-screen max-w-readable"
           options={{
             wrapper: "article",
             forceBlock: true,
