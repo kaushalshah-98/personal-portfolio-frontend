@@ -43,7 +43,7 @@ interface BlogDetailsProps {
 function BlogDetails({ title, date, content }: BlogDetailsProps) {
   return (
     <div className="flex justify-center">
-      <article className="sm:break-normal my-10 mx-5 prose prose-indigo prose-sm sm:prose-base md:prose-lg xl:prose-xl 2xl:prose-2xl">
+      <article className="sm:break-normal my-10 mx-10 prose prose-indigo prose-base md:prose-lg xl:prose-xl 2xl:prose-xl">
         <Markdown
           options={{
             wrapper: "article",

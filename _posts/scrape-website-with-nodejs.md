@@ -26,7 +26,7 @@ According to [zyte](https://www.zyte.com/learn/what-is-web-scraping/),
 
 Yeah, that’s right. Today we will extract data from [this website](https://www.zyte.com/learn/what-is-web-scraping/)’s FAQ section.
 
-# Requirements
+## Requirements
 
 The concept of scraping can be broken down into the following steps.
 
@@ -35,7 +35,7 @@ The concept of scraping can be broken down into the following steps.
 
 And that’s it! So simple right?
 
-# Initialize your project
+## Initialize your project
 
 Let’s first initialize an empty Node.js project. Go to your terminal and run the following commands
 
@@ -54,7 +54,7 @@ touch index.js
 
 So we have a skeleton Node.js project now. Let’s use it!
 
-# Install the dependencies
+## Install the dependencies
 
 Run the following command to get the required dependencies
 
