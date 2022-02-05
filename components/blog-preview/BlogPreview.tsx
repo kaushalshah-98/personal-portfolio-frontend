@@ -14,7 +14,6 @@ interface BlogPreviewProps {
 
 function BlogPreview(props: BlogPreviewProps) {
   const { title, description, imageUrl, tags, date, slug } = props;
-  console.log(imageUrl);
   return (
     <Link href={`/blog/${slug}`} passHref>
       <div className="flex flex-col pb-8 w-96 bg-white overflow-hidden shadow-lg gap-2 rounded-lg hover:cursor-pointer  transition ease-in-out duration-200 hover:scale-105">

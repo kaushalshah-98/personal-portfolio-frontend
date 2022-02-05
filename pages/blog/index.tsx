@@ -7,7 +7,6 @@ import { TypeBlogDetails } from "../../types/TypeBlogDetails";
 
 export const getStaticProps = async () => {
   const postList: TypeBlogDetails[] = getAllPosts();
-  console.log(postList);
 
   return {
     props: {
