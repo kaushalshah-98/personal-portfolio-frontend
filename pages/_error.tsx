@@ -1,22 +1,24 @@
-import NextErrorComponent from 'next/error';
+import NextErrorComponent from "next/error";
+import * as Sentry from "@sentry/nextjs";
+import { NextPageContext } from "next";
 
-import * as Sentry from '@sentry/nextjs';
+interface MyErrorPageProps {
+  statusCode: number;
+  hasGetInitialPropsRun: boolean;
+  err: any;
+}
 
-const MyError = ({ statusCode, hasGetInitialPropsRun, err }) => {
+const MyError = ({ statusCode, hasGetInitialPropsRun, err }: MyErrorPageProps) => {
   if (!hasGetInitialPropsRun && err) {
-    // getInitialProps is not called in case of
-    // https://github.com/vercel/next.js/issues/8592. As a workaround, we pass
-    // err via _app.js so it can be captured
     Sentry.captureException(err);
-    // Flushing is not required in this case as it only happens on the client
   }
 
   return <NextErrorComponent statusCode={statusCode} />;
 };
 
-MyError.getInitialProps = async (context) => {
+MyError.getInitialProps = async (context: NextPageContext) => {
   const errorInitialProps = await NextErrorComponent.getInitialProps(context);
-  
+
   const { res, err, asPath } = context;
 
   // Workaround for https://github.com/vercel/next.js/issues/8592, mark when
@@ -27,7 +29,7 @@ MyError.getInitialProps = async (context) => {
   if (res?.statusCode === 404) {
     return errorInitialProps;
   }
-  
+
   // Running on the server, the response object (`res`) is available.
   //
   // Next.js will pass an err on the server if a page's data fetching methods
@@ -54,9 +56,7 @@ MyError.getInitialProps = async (context) => {
   // If this point is reached, getInitialProps was called without any
   // information about what the error might be. This is unexpected and may
   // indicate a bug introduced in Next.js, so record it in Sentry
-  Sentry.captureException(
-    new Error(`_error.js getInitialProps missing data at path: ${asPath}`),
-  );
+  Sentry.captureException(new Error(`_error.js getInitialProps missing data at path: ${asPath}`));
   await Sentry.flush(2000);
 
   return errorInitialProps;
