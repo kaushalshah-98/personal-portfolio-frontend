@@ -14,20 +14,26 @@ export const getServerSideProps = async ({ res }: GetServerSidePropsContext): Pr
     const otherPaths: string[] = fs
       .readdirSync("pages")
       .filter((staticPage) => {
-        return !["api", "posts", "index.tsx", "_app.tsx", "_document.tsx", "404.tsx", "sitemap.xml.tsx"].includes(
-          staticPage
-        );
+        return ![
+          "api",
+          "profile",
+          "index.tsx",
+          "_app.tsx",
+          "_error.tsx",
+          "_document.tsx",
+          "404.tsx",
+          "sitemap.xml.tsx",
+        ].includes(staticPage);
       })
       .map((staticPagePath) => {
         return `${BASE_URL}/${staticPagePath}`;
       });
 
-    const postSlugs = getPostSlugs();
-    const postPaths = postSlugs.map((slug) => `${BASE_URL}/blog/${slug.replace(".md", "")}`);
+    const postPaths: string[] = fs.readdirSync("_posts").map((staticPagePath) => {
+      return `${BASE_URL}/blog/${staticPagePath.replace(".md", "")}`;
+    });
 
-    const allPaths = [...postPaths, ...otherPaths];
-
-    // const allPaths = ["https://mohammadfaisal.dev/blog/how-to-create-a-sitemap"];
+    const allPaths = [BASE_URL, ...postPaths, ...otherPaths];
 
     const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
     <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
