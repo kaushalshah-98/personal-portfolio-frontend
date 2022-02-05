@@ -7,35 +7,34 @@ const Sitemap = () => {
 };
 
 export const getServerSideProps = async ({ res }: GetServerSidePropsContext): Promise<any> => {
-  try {
-    const BASE_URL =
-      process.env.NODE_ENV === "production" ? process.env.NEXT_PUBLIC_PRODUCTION_ROOT_URL : "http://localhost:3000";
+  const BASE_URL =
+    process.env.NODE_ENV === "production" ? process.env.NEXT_PUBLIC_PRODUCTION_ROOT_URL : "http://localhost:3000";
 
-    const otherPaths: string[] = fs
-      .readdirSync("pages")
-      .filter((staticPage) => {
-        return ![
-          "api",
-          "profile",
-          "index.tsx",
-          "_app.tsx",
-          "_error.tsx",
-          "_document.tsx",
-          "404.tsx",
-          "sitemap.xml.tsx",
-        ].includes(staticPage);
-      })
-      .map((staticPagePath) => {
-        return `${BASE_URL}/${staticPagePath}`;
-      });
-
-    const postPaths: string[] = fs.readdirSync("_posts").map((staticPagePath) => {
-      return `${BASE_URL}/blog/${staticPagePath.replace(".md", "")}`;
+  const otherPaths: string[] = fs
+    .readdirSync("pages")
+    .filter((staticPage) => {
+      return ![
+        "api",
+        "profile",
+        "index.tsx",
+        "_app.tsx",
+        "_error.tsx",
+        "_document.tsx",
+        "404.tsx",
+        "sitemap.xml.tsx",
+      ].includes(staticPage);
+    })
+    .map((staticPagePath) => {
+      return `${BASE_URL}/${staticPagePath}`;
     });
 
-    const allPaths = [BASE_URL, ...postPaths, ...otherPaths];
+  const postPaths: string[] = fs.readdirSync("_posts").map((staticPagePath) => {
+    return `${BASE_URL}/blog/${staticPagePath.replace(".md", "")}`;
+  });
 
-    const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+  const allPaths = [BASE_URL, ...postPaths, ...otherPaths];
+
+  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
     <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     ${allPaths
       .map((url) => {
@@ -52,16 +51,13 @@ export const getServerSideProps = async ({ res }: GetServerSidePropsContext): Pr
     </urlset>
   `;
 
-    res.setHeader("Content-Type", "text/xml");
-    res.write(sitemap);
-    res.end();
+  res.setHeader("Content-Type", "text/xml");
+  res.write(sitemap);
+  res.end();
 
-    return {
-      props: {},
-    };
-  } catch (err) {
-    console.log(err);
-  }
+  return {
+    props: {},
+  };
 };
 
 export default Sitemap;
