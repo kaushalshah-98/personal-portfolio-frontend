@@ -1,6 +1,5 @@
 import * as fs from "fs";
-import { GetServerSidePropsContext, GetServerSidePropsResult } from "next";
-import { getPostSlugs } from "../lib/blog-api";
+import { GetServerSidePropsContext } from "next";
 
 const Sitemap = () => {
   return null;
@@ -36,9 +35,9 @@ export const getServerSideProps = async ({ res }: GetServerSidePropsContext): Pr
 
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
     <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    ${allPaths
-      .map((url) => {
-        return `
+      ${allPaths
+        .map((url) => {
+          return `
             <url>
               <loc>${url}</loc>
               <lastmod>${new Date().toISOString()}</lastmod>
@@ -46,8 +45,8 @@ export const getServerSideProps = async ({ res }: GetServerSidePropsContext): Pr
               <priority>1.0</priority>
             </url>
           `;
-      })
-      .join("")}
+        })
+        .join("")}
     </urlset>
   `;
 
