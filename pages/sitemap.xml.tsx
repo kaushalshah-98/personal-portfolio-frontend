@@ -12,6 +12,7 @@ export const getServerSideProps = async ({
   const BASE_URL =
     process.env.NODE_ENV === "production" ? process.env.NEXT_PUBLIC_PRODUCTION_ROOT_URL : "http://localhost:3000";
 
+  throw new Error("Sentry Frontend Error");
   const otherPaths: string[] = fs
     .readdirSync("pages")
     .filter((staticPage) => {

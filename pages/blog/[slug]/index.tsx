@@ -58,7 +58,7 @@ function BlogDetails({ title, date, content }: BlogDetailsProps) {
           {content}
         </Markdown>
       </article>
-      {/* <BuyMeACoffeeWidget /> */}
+      <BuyMeACoffeeWidget />
     </div>
   );
 }
