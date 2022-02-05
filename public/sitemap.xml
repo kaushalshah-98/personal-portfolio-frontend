@@ -1,98 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
     <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
         <url>
-    <loc>https://mohammadfaisal.dev/add-custom-fonts-to-nextjs</loc>
-    <lastmod>2022-02-05T18:15:24.154Z</lastmod>
+    <loc>https://mohammadfaisal.dev/blog/add-custom-fonts-to-nextjs</loc>
+    <lastmod>2022-02-05T18:33:49.550Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
 <url>
-    <loc>https://mohammadfaisal.dev/add-google-analytics-to-nextjs</loc>
-    <lastmod>2022-02-05T18:15:24.154Z</lastmod>
+    <loc>https://mohammadfaisal.dev/blog/add-google-analytics-to-nextjs</loc>
+    <lastmod>2022-02-05T18:33:49.550Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
 <url>
-    <loc>https://mohammadfaisal.dev/create-an-api-with-aws-cdk</loc>
-    <lastmod>2022-02-05T18:15:24.154Z</lastmod>
+    <loc>https://mohammadfaisal.dev/blog/create-an-api-with-aws-cdk</loc>
+    <lastmod>2022-02-05T18:33:49.550Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
 <url>
-    <loc>https://mohammadfaisal.dev/create-sitemap-in-nextjs</loc>
-    <lastmod>2022-02-05T18:15:24.154Z</lastmod>
+    <loc>https://mohammadfaisal.dev/blog/create-sitemap-in-nextjs</loc>
+    <lastmod>2022-02-05T18:33:49.550Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
 <url>
-    <loc>https://mohammadfaisal.dev/offline-search-in-reactjs</loc>
-    <lastmod>2022-02-05T18:15:24.154Z</lastmod>
+    <loc>https://mohammadfaisal.dev/blog/offline-search-in-reactjs</loc>
+    <lastmod>2022-02-05T18:33:49.550Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
 <url>
-    <loc>https://mohammadfaisal.dev/production-checklist-for-nextjs</loc>
-    <lastmod>2022-02-05T18:15:24.154Z</lastmod>
+    <loc>https://mohammadfaisal.dev/blog/production-checklist-for-nextjs</loc>
+    <lastmod>2022-02-05T18:33:49.550Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
 <url>
-    <loc>https://mohammadfaisal.dev/scrape-website-with-nodejs</loc>
-    <lastmod>2022-02-05T18:15:24.154Z</lastmod>
+    <loc>https://mohammadfaisal.dev/blog/scrape-website-with-nodejs</loc>
+    <lastmod>2022-02-05T18:33:49.550Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
 <url>
-    <loc>https://mohammadfaisal.dev/use-dynamoose-in-nodejs</loc>
-    <lastmod>2022-02-05T18:15:24.154Z</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
-  </url>
-<url>
-    <loc>https://mohammadfaisal.dev/404</loc>
-    <lastmod>2022-02-05T18:15:24.154Z</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
-  </url>
-<url>
-    <loc>https://mohammadfaisal.dev/_app</loc>
-    <lastmod>2022-02-05T18:15:24.154Z</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
-  </url>
-<url>
-    <loc>https://mohammadfaisal.dev/_document</loc>
-    <lastmod>2022-02-05T18:15:24.154Z</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
-  </url>
-<url>
-    <loc>https://mohammadfaisal.dev/_error</loc>
-    <lastmod>2022-02-05T18:15:24.154Z</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
-  </url>
-<url>
-    <loc>https://mohammadfaisal.dev/index</loc>
-    <lastmod>2022-02-05T18:15:24.154Z</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
-  </url>
-<url>
-    <loc>https://mohammadfaisal.dev/blog/index</loc>
-    <lastmod>2022-02-05T18:15:24.154Z</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
-  </url>
-<url>
-    <loc>https://mohammadfaisal.dev/profile/index</loc>
-    <lastmod>2022-02-05T18:15:24.154Z</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
-  </url>
-<url>
-    <loc>https://mohammadfaisal.dev/blog/[slug]/index</loc>
-    <lastmod>2022-02-05T18:15:24.154Z</lastmod>
+    <loc>https://mohammadfaisal.dev/blog/use-dynamoose-in-nodejs</loc>
+    <lastmod>2022-02-05T18:33:49.550Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>

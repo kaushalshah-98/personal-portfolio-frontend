@@ -5,7 +5,7 @@ function addPage(page) {
   const path = page.replace("_posts/", "").replace(".md", "").replace("pages/", "").replace(".tsx", "");
   const route = path === "/index" ? "" : path;
   return `<url>
-    <loc>${`${process.env.NEXT_PUBLIC_PRODUCTION_ROOT_URL}/${route}`}</loc>
+    <loc>${`${process.env.NEXT_PUBLIC_PRODUCTION_ROOT_URL}/blog/${route}`}</loc>
     <lastmod>${new Date().toISOString()}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
@@ -13,7 +13,7 @@ function addPage(page) {
 }
 
 async function generateSitemap() {
-  const pages = await globby(["_posts/", "pages", "!pages/api"]);
+  const pages = await globby(["_posts/"]);
   console.log("pages", pages);
 
   const paths = pages.map(addPage).join("\n");
