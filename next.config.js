@@ -4,7 +4,10 @@ const nextConfig = {
   images: {
     domains: ["images.unsplash.com", "images.pexels.com", "miro.medium.com", "/images"],
   },
-  webpack: function (config) {
+  webpack: function (config, { isServer }) {
+    if (isServer) {
+      require("./scripts/sitemap-generator");
+    }
     return config;
   },
 };
