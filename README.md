@@ -1,6 +1,6 @@
 This is a personal portfolio website of Mohammad Faisal
 
-Technologies Used
+### Technologies Used
 
 - NextJS
 - Tailwind CSS
@@ -8,9 +8,10 @@ Technologies Used
 - Markdown
 - Syntax Highlighter
 
-Features
+### Features
 
 - Showing blog posts
 - Google analytics Integration
 - SEO setup
--
+- Buy me a coffee integration
+- Tailwind typography integration
