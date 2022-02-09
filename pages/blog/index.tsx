@@ -15,9 +15,6 @@ export const getStaticProps = async () => {
   };
 };
 
-const imageUrl =
-  "https://images.unsplash.com/photo-1642356407175-5c3d00870d61?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80";
-
 interface BlogPageProps {
   posts: TypeBlogDetails[];
 }
@@ -40,15 +37,6 @@ function BlogPage({ posts }: BlogPageProps) {
             date={blogItem.data.date}
           />
         ))}
-        {/* {posts.map((blogItem: TypeBlogDetails) => (
-          <BlogPreview
-            key={blogItem.slug}
-            slug={blogItem.slug}
-            title={blogItem.data.title}
-            imageUrl={imageUrl}
-            date={blogItem.data.date}
-          />
-        ))} */}
       </div>
     </>
   );
