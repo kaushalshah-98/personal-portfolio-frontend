@@ -11,11 +11,18 @@ const Home: NextPage = () => {
       <NextSeo
         title="Mohammad Faisal | Portfolio"
         canonical={`${process.env.NEXT_PUBLIC_PRODUCTION_ROOT_URL}`}
-        description="Software Engineer | Technical Writer | Interview Engineer | Consultant"
+        description="Software Engineer | Technical Writer | Consultant | Interview Engineer"
         openGraph={{
           url: `${process.env.NEXT_PUBLIC_PRODUCTION_ROOT_URL}`,
           title: "Mohammad Faisal | Portfolio",
-          description: "Technical Blog of Mohammad Faisal",
+          description: "Portfolio of Mohammad Faisal",
+          type: "profile",
+          profile: {
+            firstName: "Mohammad",
+            lastName: "Faisal",
+            username: "56faisal",
+            gender: "male",
+          },
           images: [
             {
               url: `${process.env.NEXT_PUBLIC_PRODUCTION_ROOT_URL}/static/profile.png`,
