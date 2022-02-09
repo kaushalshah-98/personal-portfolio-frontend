@@ -9,12 +9,12 @@ const Home: NextPage = () => {
   return (
     <>
       <NextSeo
-        title="Mohammad Faisal | Personal Website"
+        title="Mohammad Faisal | Portfolio"
         canonical={`${process.env.NEXT_PUBLIC_PRODUCTION_ROOT_URL}`}
         description="Software Engineer | Technical Writer | Interview Engineer | Consultant"
         openGraph={{
           url: `${process.env.NEXT_PUBLIC_PRODUCTION_ROOT_URL}`,
-          title: "Mohammad Faisal | Software Engineer",
+          title: "Mohammad Faisal | Portfolio",
           description: "Technical Blog of Mohammad Faisal",
           images: [
             {
@@ -42,7 +42,7 @@ const Home: NextPage = () => {
         </div>
         <article className="prose sm:prose-sm md:prose-lg xl:prose-xl 2xl:prose-2xl text-center">
           <h1> {`Hi, I'm Mohammad Faisal`}</h1>
-          <h3>Software Engineer | Technical Writer | Consultant </h3>
+          <h3>Software Engineer | Technical Writer </h3>
           <h4>ReactJS | NodeJS | AWS </h4>
         </article>
 
