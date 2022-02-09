@@ -51,9 +51,7 @@ function BlogPage({ posts }: BlogPageProps) {
           site_name: "Mohammad Faisal's Blog",
         }}
       />
-      <Head>
-        <title>Blog | Mohammad Faisal</title>
-      </Head>
+
       <div className="flex flex-wrap p-5 gap-5  justify-evenly bg-gray-50">
         {posts.map((blogItem: TypeBlogDetails) => (
           <BlogPreview
