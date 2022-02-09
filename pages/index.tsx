@@ -18,23 +18,21 @@ const Home: NextPage = () => {
           description: "Technical Blog of Mohammad Faisal",
           images: [
             {
-              url: "https://www.example.ie/og-image-01.jpg",
+              url: `${process.env.NEXT_PUBLIC_PRODUCTION_ROOT_URL}/static/profile.png`,
               width: 800,
               height: 600,
-              alt: "Og Image Alt",
-              type: "image/jpeg",
+              alt: "Profile Image",
+              type: "image/png",
             },
             {
-              url: "https://www.example.ie/og-image-02.jpg",
+              url: `${process.env.NEXT_PUBLIC_PRODUCTION_ROOT_URL}/static/profile.png`,
               width: 900,
               height: 800,
-              alt: "Og Image Alt Second",
-              type: "image/jpeg",
+              alt: "Profile Image",
+              type: "image/png",
             },
-            { url: "https://www.example.ie/og-image-03.jpg" },
-            { url: "https://www.example.ie/og-image-04.jpg" },
           ],
-          site_name: "Mohammad Faisal",
+          site_name: "Mohammad Faisal's Portfolio",
         }}
       />
 
