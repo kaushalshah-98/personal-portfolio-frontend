@@ -43,6 +43,7 @@ const Home: NextPage = () => {
         <article className="prose sm:prose-sm md:prose-lg xl:prose-xl 2xl:prose-2xl text-center">
           <h1> {`Hi, I'm Mohammad Faisal`}</h1>
           <h3>Software Engineer | Technical Writer | Consultant </h3>
+          <h4>ReactJS | NodeJS | AWS </h4>
         </article>
 
         <Link href="/blog" passHref>
