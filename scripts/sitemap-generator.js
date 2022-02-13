@@ -1,11 +1,15 @@
 const fs = require("fs");
-const globby = require("globby");
+const glob = require("glob");
 
 function addPage(page) {
-  const path = page.replace("_posts/", "").replace(".md", "").replace("pages/", "").replace(".tsx", "");
-  const route = path === "/index" ? "" : path;
+  console.log(page);
+  // const path = page.replace("_posts/", "").replace(".md", "").replace("pages/", "").replace(".tsx", "");
+  // const route = path === "/index" ? "" : path;
+  // console.log(route);
+  page = page[page.length - 1] === "/" ? page.substring(0, page.length - 1) : page;
+  console.log(page);
   return `<url>
-    <loc>${`${process.env.NEXT_PUBLIC_PRODUCTION_ROOT_URL}/${route}`}</loc>
+    <loc>${`${process.env.NEXT_PUBLIC_PRODUCTION_ROOT_URL}/${page}`}</loc>
     <lastmod>${new Date().toISOString()}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
@@ -13,26 +17,23 @@ function addPage(page) {
 }
 
 async function generateSitemap() {
-  let blogs = await globby(["_posts/"]);
-  let pages = await globby([
-    "pages/",
-    "!pages/api/",
-    "!pages/blog/[slug]",
-    "!pages/_app.tsx",
-    "!pages/_document.tsx",
-    "!pages/_error.tsx",
-    "!pages/404.tsx",
-  ]);
+  const blogsDir = "_posts/**/*.*";
+  let blogPaths = await glob.sync(blogsDir);
 
-  console.log("pages are ", pages);
-  console.log("blogs are ", blogs);
+  const pagesDir = "pages/**/*.tsx";
+  let pagesPaths = await glob.sync(pagesDir);
+  pagesPaths = pagesPaths
+    .filter((path) => !path.includes("["))
+    .filter((path) => !path.includes("/_"))
+    .filter((path) => !path.includes("404"));
 
-  blogs = blogs.map((rawBlogName) => "blog" + rawBlogName.replace("_posts", "").replace(".md", ""));
+  blogPaths = blogPaths.map((rawBlogName) => "blog" + rawBlogName.replace("_posts", "").replace(".md", ""));
 
-  pages = pages.map((rawPageName) => rawPageName.replace("pages/", "").replace(".tsx", "").replace("index", ""));
+  pagesPaths = pagesPaths.map((rawPageName) =>
+    rawPageName.replace("pages/", "").replace(".tsx", "").replace("index", "")
+  );
 
-  const allPages = [...pages, ...blogs];
-  console.log("all apges ", allPages);
+  const allPages = [...pagesPaths, ...blogPaths];
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
     <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
         ${allPages.map(addPage).join("\n")}

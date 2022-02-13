@@ -89,16 +89,16 @@ function BlogDetails({ banner, title, tags, date, slug, description, content }: 
         }}
       />
       <div className="flex justify-center">
-        <article className="sm:break-normal my-10 mx-10 prose prose-indigo prose-base md:prose-lg xl:prose-xl 2xl:prose-xl">
+        <article className="sm:break-normal my-10   prose prose-indigo prose-base md:prose-lg xl:prose-xl 2xl:prose-xl">
           <Markdown
             options={{
               wrapper: "article",
-              forceBlock: false,
-              // overrides: {
-              //   code: {
-              //     component: CodeBlock,
-              //   },
-              // },
+              forceBlock: true,
+              overrides: {
+                code: {
+                  component: CodeBlock,
+                },
+              },
             }}
           >
             {content}
