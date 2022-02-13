@@ -24,7 +24,7 @@ const Home: NextPage = () => {
   return (
     <>
       <NextSeo
-        title="Mohammad Faisal | Portfolio"
+        title="Portfolio | Mohammad Faisal"
         canonical={`${process.env.NEXT_PUBLIC_PRODUCTION_ROOT_URL}`}
         description="Software Engineer | Technical Writer | Consultant | Interview Engineer"
         openGraph={{
@@ -65,7 +65,7 @@ const Home: NextPage = () => {
         <article className="prose sm:prose-sm md:prose-lg xl:prose-xl 2xl:prose-2xl text-center">
           <h1> {`Hi, I'm Mohammad Faisal`}</h1>
           <h2>
-            <TextTransition inline={true} text={titles[index % titles.length]} springConfig={presets.molasses} />
+            <TextTransition inline={true} text={titles[index % titles.length]} springConfig={presets.wobbly} />
           </h2>
           <h4>ReactJS | NodeJS | AWS </h4>
         </article>

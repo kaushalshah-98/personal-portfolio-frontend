@@ -88,12 +88,12 @@ function BlogDetails({ banner, title, tags, date, slug, description, content }: 
           site_name: "Mohammad Faisal's Portfolio",
         }}
       />
-      <div className="flex justify-center">
-        <article className="sm:break-normal my-10   prose prose-indigo prose-base md:prose-lg xl:prose-xl 2xl:prose-xl">
+      <div className="flex justify-center px-5">
+        <article className=" sm:break-normal my-10 prose prose-indigo prose-base md:prose-lg xl:prose-xl 2xl:prose-xl">
           <Markdown
             options={{
               wrapper: "article",
-              forceBlock: true,
+              forceBlock: false,
               overrides: {
                 code: {
                   component: CodeBlock,
