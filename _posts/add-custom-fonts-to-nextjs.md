@@ -33,7 +33,7 @@ cd nextjs-font-demo
 yarn dev
 ```
 
-Head over to your browser and you will see it running [locally](http://localhost:3000). Change the text inside `index.js` with only some text.
+Head over to your browser and you will see it running [locally](http://localhost:3000). Change the text inside **index.js** with only some text.
 
 ![](/images/posts/add-custom-fonts-to-nextjs/initial-text.png)
 
@@ -51,9 +51,9 @@ You can add or remove various weights for this particular font. Get the link fro
 
 ## First Way
 
-The first way to do this is by a custom `_document.js` file. The [Document](https://nextjs.org/docs/advanced-features/custom-document) is a special feature of Next.js that augments your applications `<html>` and `<body>` tags.
+The first way to do this is by a custom **\_document.js** file. The [Document](https://nextjs.org/docs/advanced-features/custom-document) is a special feature of Next.js that augments your applications **<html>** and **<body>** tags.
 
-Create a new page under `/pages` directory named `_document.js` file and add the following code there.
+Create a new page under **/pages** directory named **\_document.js** file and add the following code there.
 
 ```javascript
 import Document, { Html, Head, Main, NextScript } from "next/document";
@@ -87,9 +87,9 @@ class MyDocument extends Document {
 export default MyDocument;
 ```
 
-There are some customizations that you need to do for the `link` tags here. For example notice we have closed the `link` tags with `/>` instead of `>`
+There are some customizations that you need to do for the _link_ tags here. For example notice we have closed the **link** tags with **/>** instead of **>**
 
-Also, the `crossorigin` is renamed to `crossOrigin="true"` because we are writing jsx and not plain HTML here.
+Also, the **crossorigin** is renamed to **crossOrigin="true"** because we are writing jsx and not plain HTML here.
 
 Well, now this will download the desired font for us. Now we just use it anywhere we want like the following.
 
@@ -101,7 +101,7 @@ font-family: ‘Nunito’, sans-serif;
 
 We can also import Fonts into Next.js using the global CSS.
 
-You will find a file named `global.css` under the `styles` folder. The styles applied here will be applied to the whole website.
+You will find a file named **global.css** under the **styles** folder. The styles applied here will be applied to the whole website.
 
 Now go there and add the following line
 
@@ -115,7 +115,7 @@ This will do the same thing as before.
 
 ## Final Result
 
-Now after adding the font and applying it to the body of the `global.css` file our final result will look something like this
+Now after adding the font and applying it to the body of the **global.css** file our final result will look something like this
 
 ![](/images/posts/add-custom-fonts-to-nextjs/final-text.png)
 

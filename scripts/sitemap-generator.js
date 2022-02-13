@@ -2,10 +2,6 @@ const fs = require("fs");
 const glob = require("glob");
 
 function addPage(page) {
-  console.log(page);
-  // const path = page.replace("_posts/", "").replace(".md", "").replace("pages/", "").replace(".tsx", "");
-  // const route = path === "/index" ? "" : path;
-  // console.log(route);
   page = page[page.length - 1] === "/" ? page.substring(0, page.length - 1) : page;
   console.log(page);
   return `<url>
