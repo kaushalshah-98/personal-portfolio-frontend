@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
@@ -5,7 +6,21 @@ import Link from "next/link";
 import { FaArrowRight } from "react-icons/fa";
 import { NextSeo } from "next-seo";
 
+import TextTransition, { presets } from "react-text-transition";
+
+const titles = ["Software Engineer", "Technical Writer", "Interview Engineer"];
+
 const Home: NextPage = () => {
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    const intervalId = setInterval(
+      () => setIndex((index) => index + 1),
+      3000 // every 3 seconds
+    );
+    return () => clearTimeout(intervalId);
+  }, []);
+
   return (
     <>
       <NextSeo
@@ -49,7 +64,9 @@ const Home: NextPage = () => {
         </div>
         <article className="prose sm:prose-sm md:prose-lg xl:prose-xl 2xl:prose-2xl text-center">
           <h1> {`Hi, I'm Mohammad Faisal`}</h1>
-          <h3>Software Engineer | Technical Writer </h3>
+          <h2>
+            <TextTransition inline={true} text={titles[index % titles.length]} springConfig={presets.molasses} />
+          </h2>
           <h4>ReactJS | NodeJS | AWS </h4>
         </article>
 
